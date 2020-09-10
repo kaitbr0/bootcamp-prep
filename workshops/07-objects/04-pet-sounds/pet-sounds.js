@@ -38,3 +38,17 @@ let animalNoises = [
 ];
 
 // YOUR CODE BELOW
+const petSounds = (animal, country) => {
+  let sound = ''
+  for (let i = 0; i < animalNoises.length; i++){
+    if (animalNoises[i][animal]){
+      sound = animalNoises[i][animal][country]
+    }
+  }
+  let result = animal[0].toUpperCase()
+  for (let i = 1; i < animal.length; i++){
+    result += animal[i]
+  }
+  let sentence = `${result}s in ${country} say ${sound}`
+return sentence 
+}
